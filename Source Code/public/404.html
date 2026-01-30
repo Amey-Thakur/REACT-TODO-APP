@@ -1,0 +1,232 @@
+<!--
+  ----------------------------------------------------------------------------
+  File: 404.html
+  Authors:
+       Amey Thakur & Mega Satish
+
+  Repository: https://github.com/Amey-Thakur/REACT-TODO-APP
+  License: MIT License
+  Release Date: June 25, 2022
+  ----------------------------------------------------------------------------
+  
+  File Overview:
+  This is the custom "Page Not Found" error page.
+  It features a detailed CSS animation (glitch effect) and ensures that
+  users who get lost are guided back to the main application with style.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Task Not Found | React Todo App</title>
+
+    <!-- Modern Typography & Iconography -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --clr-bg: #282c34;
+            --clr-card: #3b404e;
+            --clr-accent: #61dafb;
+            --clr-success: #00ff88;
+            --clr-text: #ffffff;
+            --clr-slate: #888888;
+        }
+
+        body {
+            background-color: var(--clr-bg);
+            color: var(--clr-text);
+            font-family: 'Play', sans-serif;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            user-select: none;
+        }
+
+        .error-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            z-index: 2;
+        }
+
+        .error-code {
+            font-size: 10rem;
+            color: var(--clr-accent);
+            font-weight: 700;
+            margin: 0;
+            line-height: 1;
+            position: relative;
+            animation: glitch 1.5s infinite alternate-reverse;
+            text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3), -2px -2px 0 var(--clr-success);
+            letter-spacing: -5px;
+        }
+
+        @keyframes glitch {
+            0% {
+                transform: skew(0deg);
+                filter: hue-rotate(0deg);
+            }
+
+            20% {
+                transform: skew(-2deg);
+            }
+
+            40% {
+                transform: skew(2deg);
+                filter: hue-rotate(10deg);
+            }
+
+            60% {
+                transform: skew(-1deg);
+            }
+
+            80% {
+                transform: skew(3deg);
+                filter: hue-rotate(-10deg);
+            }
+
+            100% {
+                transform: skew(0deg);
+            }
+        }
+
+        .broken-icon {
+            font-size: 6rem;
+            color: var(--clr-slate);
+            margin-bottom: 30px;
+            animation: float 4s ease-in-out infinite;
+            filter: drop-shadow(0 0 15px rgba(97, 218, 251, 0.3));
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+                opacity: 0.3;
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(-5deg);
+                opacity: 0.6;
+            }
+        }
+
+        .error-message {
+            font-size: 1.2rem;
+            color: var(--clr-slate);
+            margin-top: 10px;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+            opacity: 0.8;
+        }
+
+        .btn-return {
+            background: transparent;
+            color: var(--clr-accent);
+            padding: 12px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(97, 218, 251, 0.3);
+            display: inline-flex;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+
+        .btn-return:hover {
+            background: rgba(97, 218, 251, 0.1);
+            border-color: var(--clr-accent);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .ambient-glow {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(97, 218, 251, 0.03) 0%, transparent 70%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        footer {
+            padding: 1.5rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            background: transparent;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            color: var(--clr-slate);
+            font-size: 0.9rem;
+            z-index: 2;
+        }
+
+        footer p {
+            margin: 0.2rem 0;
+        }
+
+        .author-link {
+            color: var(--clr-accent);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .author-link:hover {
+            color: #a8efff;
+            text-shadow: 0 0 8px rgba(97, 218, 251, 0.4);
+        }
+
+        .repo-link {
+            color: var(--clr-slate);
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .repo-link:hover {
+            color: var(--clr-accent);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="ambient-glow"></div>
+
+    <div class="error-container">
+        <i class="fas fa-list-check broken-icon"></i>
+        <h1 class="error-code">404</h1>
+        <p class="error-message">Oops! This task seems to have drifted out of the list.</p>
+
+        <a href="/" class="btn-return">
+            <i class="fas fa-arrow-left" style="margin-right: 10px;"></i> Return to App
+        </a>
+    </div>
+
+    <footer>
+        <p>Created by <a href="https://github.com/Amey-Thakur" class="author-link" target="_blank">Amey Thakur</a> & <a
+                href="https://github.com/msatmod" class="author-link" target="_blank">Mega Satish</a></p>
+        <p>Released: June 25, 2022 • <a href="https://github.com/Amey-Thakur/REACT-TODO-APP" class="repo-link"
+                target="_blank">GitHub Repo</a></p>
+    </footer>
+
+</body>
+
+</html>

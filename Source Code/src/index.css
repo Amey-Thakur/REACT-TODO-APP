@@ -1,0 +1,31 @@
+/**
+ * ----------------------------------------------------------------------------
+ * File: index.css
+ * Authors:
+ *      Amey Thakur & Mega Satish
+ *
+ * Repository: https://github.com/Amey-Thakur/REACT-TODO-APP
+ * License: MIT License
+ * Release Date: June 25, 2022
+ * ----------------------------------------------------------------------------
+ *
+ * File Overview:
+ * This file contains the foundational styles for the React application.
+ * It sets the baseline font stack, resets default margins, and optimizes
+ * font smoothing for a premium text rendering experience.
+ *
+ */
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
