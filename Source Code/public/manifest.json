@@ -1,6 +1,8 @@
 {
     "short_name": "Todo App",
     "name": "React Todo App",
+    "description": "A high-performance React Todo Application with cinematic animations.",
+    "author": "Amey Thakur & Mega Satish",
     "icons": [
         {
             "src": "favicon.ico",
