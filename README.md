@@ -1,7 +1,7 @@
 <div align="center">
 
   <a name="readme-top"></a>
-  # 🧠 React Todo App
+  # System Log: Goal Achieved
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey)](LICENSE)
   ![Status](https://img.shields.io/badge/Status-Completed-success)
@@ -276,7 +276,7 @@ Special thanks to the **mentors and peers** whose encouragement, discussions, an
 
   <br>
 
-  🧠 **[React Todo App](https://amey-thakur.github.io/REACT-TODO-APP)**
+  ✅ **[React Todo App](https://amey-thakur.github.io/REACT-TODO-APP)**
 
   ---
 
