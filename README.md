@@ -45,7 +45,7 @@
 <a name="overview"></a>
 ## Overview
 
-**React Todo App** is a tactile interactive system engineered to redefine productivity through a premium, responsive interface. By bridging the gap between traditional list-making and sensory-rich digital environments, this repository provides a foundational study into modern front-end architecture and Human-Machine Interaction (HMI).
+**React Todo App** is a tactile interactive system engineered to redefine productivity through a responsive interface. By bridging the gap between traditional list-making and sensory-rich digital environments, this repository provides a foundational study into modern front-end architecture and Human-Machine Interaction (HMI).
 
 The application serves as a digital exploration of state management and physics-based animations, brought into a modern context via Vite and React 19, enabling high-performance task orchestration directly within the browser environment.
 
@@ -75,7 +75,7 @@ The interaction model is governed by strict **computational design patterns** en
 | **Dynamic Priority** | Integrated **Tri-State Priority Engine** for visual and structural task classification. |
 | **Victory Shimmer** | **High-Fidelity Particle Systems** and shockwaves that celebrate mission completion milestones. |
 | **PWA Readiness** | **Service Worker Integration** allowing for offline task tracking and standalone installation. |
-| **Scholarly Clarity** | In-depth and detailed comments integrated throughout the codebase for transparent logic study. |
+| **Structural Clarity** | In-depth and detailed comments integrated throughout the codebase for transparent logic study. |
 
 > [!NOTE]
 > ### Interactive Polish: The Neural Slate
@@ -86,7 +86,7 @@ The interaction model is governed by strict **computational design patterns** en
 - **Logic**: **State Orchestration** (React Hooks & Contextual Persistence)
 - **Motion**: **Framer Motion** (Physics-Based Dynamics)
 - **Audio**: **Web Audio API** (Procedural Synthesis)
-- **UI System**: Premium Design (Custom CSS & Glassmorphism)
+- **UI System**: Modern Design (Custom CSS & Glassmorphism)
 - **Tooling**: Vite 6 (Modern Bundling Architecture)
 - **Deployment**: GitHub Actions (PWA Deployment Pipeline)
 - **Hosting**: GitHub Pages
@@ -103,7 +103,7 @@ REACT-TODO-APP/
 ├── .github/ workflows/              # CI/CD Automation
 │   └── deploy.yml                   # GitHub Pages Deployment
 │
-├── docs/                            # Academic Documentation
+├── docs/                            # Project Documentation
 │   └── SPECIFICATION.md             # Technical Architecture
 │
 ├── Mega/                            # Attribution Assets
@@ -128,7 +128,7 @@ REACT-TODO-APP/
 │   └── package.json                 # Dependency Manifest
 │
 ├── SECURITY.md                      # Security Protocols
-├── CITATION.cff                     # Academic Citation Manifest
+├── CITATION.cff                     # Project Citation Manifest
 ├── codemeta.json                    # Metadata Standard
 ├── LICENSE                          # MIT License (Verbatim)
 └── README.md                        # Project Entrance
@@ -142,7 +142,7 @@ REACT-TODO-APP/
 <div align="center">
   <b>Main Interface: Modern Design</b>
   <br>
-  <i>Initial system state with premium aesthetics and synchronized brand identity.</i>
+  <i>Initial system state with optimized aesthetics and synchronized brand identity.</i>
   <br><br>
   <img src="screenshots/1_Landing_Page.png" alt="Landing Page" width="90%">
   <br><br><br>
@@ -163,7 +163,7 @@ REACT-TODO-APP/
 
   <b>Quantified Progress: Milestone Tracking</b>
   <br>
-  <i>Linguistic and visual progress indicators for real-time mission synchronization.</i>
+  <i>Operational and visual progress indicators for real-time mission synchronization.</i>
   <br><br>
   <img src="screenshots/4_Progress_33.png" alt="Progress" width="90%">
   <br><br><br>
@@ -225,7 +225,7 @@ npm run dev
 <a name="usage-guidelines"></a>
 ## Usage Guidelines
 
-This repository is openly shared to support learning and knowledge exchange across the academic community.
+This repository is openly shared to support learning and knowledge exchange across the engineering community.
 
 **For Students**  
 Use this project as reference material for understanding **React State Management (Hooks)**, **Physics-Based UI Animations (Framer Motion)**, and **procedural audio synthesis**. The source code is available for study to facilitate self-paced learning and exploration of **modern front-end pipelines and HMI design principles**.
@@ -234,7 +234,7 @@ Use this project as reference material for understanding **React State Managemen
 This project may serve as a practical lab example or supplementary teaching resource for **Web Engineering**, **Human-Machine Interaction**, and **Interactive System Architecture** courses. Attribution is appreciated when utilizing content.
 
 **For Researchers**  
-The documentation and architectural approach may provide insights into **academic project structuring**, **Vite-based PWA deployment**, and **sensory feedback loops in interactive software**.
+The documentation and architectural approach may provide insights into **systematic project structuring**, **Vite-based PWA deployment**, and **sensory feedback loops in interactive software**.
 
 ---
 
@@ -263,7 +263,7 @@ This project features **React Todo App**, a sensory-rich task management system.
 
 ### Acknowledgments
 
-Grateful acknowledgment to [**Mega Satish**](https://github.com/msatmod) for her exceptional collaboration and scholarly partnership during the development of this interactive engineering project. Her constant support, technical clarity, and dedication to software quality were instrumental in achieving the system's functional objectives. Learning alongside her was a transformative experience; her thoughtful approach to problem-solving and steady encouragement turned complex requirements into meaningful learning moments. This work reflects the growth and insights gained from our side-by-side academic journey. Thank you, Mega, for everything you shared and taught along the way.
+Grateful acknowledgment to [**Mega Satish**](https://github.com/msatmod) for her exceptional collaboration and partnership during the development of this interactive engineering project. Her constant support, technical clarity, and dedication to software quality were instrumental in achieving the system's functional objectives. Learning alongside her was a transformative experience; her thoughtful approach to problem-solving and steady encouragement turned complex requirements into meaningful learning moments. This work reflects the growth and insights gained from our side-by-side journey. Thank you, Mega, for everything you shared and taught along the way.
 
 Special thanks to the **mentors and peers** whose encouragement, discussions, and support contributed meaningfully to this learning experience.
 
