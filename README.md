@@ -115,7 +115,7 @@ REACT-TODO-APP/
 │   ├── 2_Title_Animation.png        # Interactive Feedback
 │   ├── 3_Tasks_Added.png            # State Management
 │   ├── 4_Progress_33.png            # Progress Tracking
-│   └── 7_Goal_Achieved.png          # Victory State
+│   └── 8_Victory_Mission.png        # Victory State
 │
 ├── Source Code/                     # Primary Application Layer
 │   ├── public/                      # Static Assets
@@ -171,7 +171,7 @@ REACT-TODO-APP/
   <br>
   <i>System-wide celebration triggered upon total task completion with complex particle effects.</i>
   <br><br>
-  <img src="screenshots/7_Goal_Achieved.png" alt="Goal Achieved" width="90%">
+  <img src="screenshots/8_Victory_Mission.png" alt="Goal Achieved" width="90%">
 </div>
 
 ---
