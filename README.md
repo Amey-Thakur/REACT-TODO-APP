@@ -108,8 +108,7 @@ REACT-TODO-APP/
 │
 ├── Mega/                            # Attribution Assets
 │   ├── Filly.jpg                    # Companion (Filly)
-│   ├── Mega.png                     # Profile Image (Mega Satish)
-│   └── Mega_Professional.jpg        # Secondary Profile
+│   └── Mega.png                     # Profile Image (Mega Satish)
 │
 ├── screenshots/                     # Visual Gallery
 │   ├── 1_Landing_Page.png           # Modern Interface
