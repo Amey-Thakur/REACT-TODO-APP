@@ -127,6 +127,7 @@ REACT-TODO-APP/
 │   └── package.json                 # Dependency Manifest
 │
 ├── SECURITY.md                      # Security Protocols
+├── social_preview.html              # Social Preview Branding
 ├── CITATION.cff                     # Project Citation Manifest
 ├── codemeta.json                    # Metadata Standard
 ├── LICENSE                          # MIT License

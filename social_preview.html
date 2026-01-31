@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Todo App - Social Preview</title>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-deep: #0a0c10;
+            --bg-card: rgba(40, 44, 52, 0.7);
+            --accent-blue: #61dafb;
+            --accent-green: #00ff88;
+            --text-main: #ffffff;
+            --text-dim: #888888;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Play', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* 1280x640 Box */
+        .preview-container {
+            width: 1280px;
+            height: 640px;
+            background: radial-gradient(circle at center, #1a1e26 0%, var(--bg-deep) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 50px 100px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Background Grid */
+        .grid-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(rgba(97, 218, 251, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(97, 218, 251, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: 1;
+        }
+
+        /* Decorative Glows */
+        .glow-blue {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: var(--accent-blue);
+            filter: blur(150px);
+            opacity: 0.1;
+            top: -200px;
+            left: -200px;
+            z-index: 0;
+        }
+
+        .glow-green {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: var(--accent-green);
+            filter: blur(120px);
+            opacity: 0.1;
+            bottom: -150px;
+            right: -100px;
+            z-index: 0;
+        }
+
+        /* Left Content */
+        .content-left {
+            flex: 1.2;
+            padding: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(0, 255, 136, 0.05);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            padding: 8px 16px;
+            border-radius: 4px;
+            width: fit-content;
+            margin-bottom: 24px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent-green);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent-green);
+        }
+
+        .status-text {
+            color: var(--accent-green);
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 72px;
+            color: var(--text-main);
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .accent-blue {
+            color: var(--accent-blue);
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: var(--text-dim);
+            letter-spacing: 1px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            max-width: 500px;
+        }
+
+        .author-section {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .author-label {
+            font-size: 12px;
+            color: #555;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .author-names {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--accent-green);
+            letter-spacing: 1px;
+        }
+
+        /* Right Preview */
+        .content-right {
+            flex: 1;
+            position: relative;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Mock UI */
+        .mock-ui {
+            width: 450px;
+            background: var(--bg-card);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 30px;
+            transform: perspective(1000px) rotateY(-15deg) rotateX(5deg);
+            box-shadow: -20px 30px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .mock-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .mock-logo {
+            width: 30px;
+            height: 30px;
+            background: var(--accent-blue);
+            border-radius: 4px;
+        }
+
+        .mock-progress-bar {
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            margin-bottom: 30px;
+        }
+
+        .mock-progress-fill {
+            width: 100%;
+            height: 100%;
+            background: var(--accent-green);
+            box-shadow: 0 0 10px var(--accent-green);
+            border-radius: 2px;
+        }
+
+        .mock-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            border-left: 3px solid var(--accent-green);
+        }
+
+        .mock-check {
+            width: 16px;
+            height: 16px;
+            border: 2px solid var(--accent-green);
+            border-radius: 4px;
+        }
+
+        .mock-task {
+            flex: 1;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+        }
+
+        /* Footer Info */
+        .footer-link {
+            position: absolute;
+            bottom: 40px;
+            left: 80px;
+            font-size: 14px;
+            color: var(--accent-blue);
+            letter-spacing: 2px;
+            text-decoration: none;
+            z-index: 20;
+            border-bottom: 1px solid rgba(97, 218, 251, 0.3);
+            padding-bottom: 4px;
+        }
+
+        .github-corner {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: rgba(255, 255, 255, 0.2);
+            z-index: 20;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="preview-container">
+        <div class="grid-overlay"></div>
+        <div class="glow-blue"></div>
+        <div class="glow-green"></div>
+
+        <div class="content-left">
+            <div class="status-badge">
+                <div class="status-dot"></div>
+                <div class="status-text">Stability: Nominal</div>
+            </div>
+
+            <h1>React<br><span class="accent-blue">Todo App</span></h1>
+
+            <p class="subtitle">
+                A high-performance tactile task management system built with React 19, Vite 6, and Framer Motion.
+                Featuring procedural audio and physics-based interactions.
+            </p>
+
+            <div class="author-section">
+                <div class="author-label">Engineered By</div>
+                <div class="author-names">Amey Thakur & Mega Satish</div>
+            </div>
+        </div>
+
+        <div class="content-right">
+            <div class="mock-ui">
+                <div class="mock-header">
+                    <div style="color: #61dafb; font-size: 12px; font-weight: 700; letter-spacing: 2px;">GOAL ACHIEVED
+                    </div>
+                    <div style="font-size: 10px; color: #555;">SYSTEM LOG</div>
+                </div>
+                <div class="mock-progress-bar">
+                    <div class="mock-progress-fill"></div>
+                </div>
+                <div class="mock-item">
+                    <div class="mock-check" style="background: #00ff88;"></div>
+                    <div class="mock-task" style="width: 70%;"></div>
+                </div>
+                <div class="mock-item">
+                    <div class="mock-check" style="background: #00ff88;"></div>
+                    <div class="mock-task" style="width: 40%;"></div>
+                </div>
+                <div class="mock-item">
+                    <div class="mock-check" style="background: #00ff88;"></div>
+                    <div class="mock-task" style="width: 60%;"></div>
+                </div>
+                <div style="margin-top: 25px; text-align: center;">
+                    <span
+                        style="color: #00ff88; font-size: 32px; font-weight: 300; letter-spacing: 6px;">COMPLETE</span>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="footer-link">https://amey-thakur.github.io/REACT-TODO-APP/</a>
+    </div>
+
+</body>
+
+</html>
