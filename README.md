@@ -1,71 +1,290 @@
-# Getting Started with Create React App
+<div align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <a name="readme-top"></a>
+  # React Todo App
 
-## Available Scripts
+  [![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey)](LICENSE)
+  ![Status](https://img.shields.io/badge/Status-Completed-success)
+  [![Technology](https://img.shields.io/badge/Technology-React%20%7C%20Vite-blueviolet)](https://github.com/Amey-Thakur/REACT-TODO-APP)
+  [![Developed by Amey Thakur and Mega Satish](https://img.shields.io/badge/Developed%20by-Amey%20Thakur%20%26%20Mega%20Satish-blue.svg)](https://github.com/Amey-Thakur/REACT-TODO-APP)
 
-In the project directory, you can run:
+  A high-performance, tactile task management system built with React and Framer Motion, utilizing procedural audio feedback for an enhanced Human-Machine Interaction (HMI) experience.
 
-### `npm start`
+  **[Source Code](Source%20Code/)** &nbsp;·&nbsp; **[Technical Specification](docs/SPECIFICATION.md)** &nbsp;·&nbsp; **[Live Demo](https://amey-thakur.github.io/REACT-TODO-APP/)**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+</div>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+<div align="center">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  [Authors](#authors) &nbsp;·&nbsp; [Overview](#overview) &nbsp;·&nbsp; [Features](#features) &nbsp;·&nbsp; [Structure](#project-structure) &nbsp;·&nbsp; [Results](#results) &nbsp;·&nbsp; [Quick Start](#quick-start) &nbsp;·&nbsp; [Usage Guidelines](#usage-guidelines) &nbsp;·&nbsp; [License](#license) &nbsp;·&nbsp; [About](#about-this-repository) &nbsp;·&nbsp; [Acknowledgments](#acknowledgments)
 
-### `npm run build`
+</div>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- AUTHORS -->
+<div align="center">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  <a name="authors"></a>
+  ## Authors
 
-### `npm run eject`
+| <a href="https://github.com/Amey-Thakur"><img src="https://github.com/Amey-Thakur.png" width="150" height="150" alt="Amey Thakur"></a><br>[**Amey Thakur**](https://github.com/Amey-Thakur)<br><br>[![ORCID](https://img.shields.io/badge/ORCID-0000--0001--5644--1575-green.svg)](https://orcid.org/0000-0001-5644-1575) | <a href="https://github.com/msatmod"><img src="Mega/Mega.png" width="150" height="150" alt="Mega Satish"></a><br>[**Mega Satish**](https://github.com/msatmod)<br><br>[![ORCID](https://img.shields.io/badge/ORCID-0000--0002--1844--9557-green.svg)](https://orcid.org/0000-0002-1844-9557) |
+| :---: | :---: |
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+</div>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> [!IMPORTANT]
+> ### 🤝🏻 Special Acknowledgement
+> *Special thanks to **[Mega Satish](https://github.com/msatmod)** for her meaningful contributions, guidance, and support that helped shape this work.*
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<!-- OVERVIEW -->
+<a name="overview"></a>
+## Overview
 
-## Learn More
+**React Todo App** is a tactile interactive system engineered to redefine productivity through a premium, responsive interface. By bridging the gap between traditional list-making and sensory-rich digital environments, this repository provides a foundational study into modern front-end architecture and Human-Machine Interaction (HMI).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The application serves as a digital exploration of state management and physics-based animations, brought into a modern context via Vite and React 19, enabling high-performance task orchestration directly within the browser environment.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Productivity Heuristics
+The interaction model is governed by strict **computational design patterns** ensuring fidelity and responsiveness:
+*   **Kinetic Feedback**: The system utilizes **Framer Motion** for complex physics-based animations, providing tactile confirmation for every user action from task creation to reordering.
+*   **Procedural Audio**: Beyond visual cues, the system integrates a **Web Audio API engine** that dynamically generates synthesized waveforms, reinforcing the goal-driven narrative of the application.
+*   **State Persistence**: LocalStorage integration ensures the mission docket remains synchronized across session restarts, maintaining a zero-latency bridge between raw data and actionable progress.
 
-### Code Splitting
+> [!TIP]
+> **Sensory Precision Integration**
+>
+> To maximize user engagement, the system employs a **multi-sensory validation system**. **Visual progress vectors** visualize the completion state, and **procedural chimes** provide auditory rewards, strictly coupling productivity goals with state changes. This ensures the user's mental model is constantly synchronized with the underlying mission trajectory.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+<!-- FEATURES -->
+<a name="features"></a>
+## Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+| Feature | Description |
+|---------|-------------|
+| **Tactile Interaction** | Implements **Physics-Based Drag-and-Drop** for intuitive and high-impact task reordering. |
+| **Procedural Audio** | Custom **Web Audio Synthesizer** generating real-time waveforms for tactile sensory feedback. |
+| **Progress Persistence** | Robust **LocalStorage Sync** ensuring mission data survives browser lifecycle events. |
+| **Cinematic Loading** | A deterministic **System Boot Sequence** that ensures assets are synchronized before interaction. |
+| **Dynamic Priority** | Integrated **Tri-State Priority Engine** for visual and structural task classification. |
+| **Victory Shimmer** | **High-Fidelity Particle Systems** and shockwaves that celebrate mission completion milestones. |
+| **PWA Readiness** | **Service Worker Integration** allowing for offline task tracking and standalone installation. |
+| **Scholarly Clarity** | In-depth and detailed comments integrated throughout the codebase for transparent logic study. |
 
-### Making a Progressive Web App
+> [!NOTE]
+> ### Interactive Polish: The Neural Slate
+> We have engineered a **Logic-Driven Animation Manager** that calibrates layout shifts across multiple vectors to simulate fluid human-like movement. The visual language focuses on the minimalist "Neural Slate" aesthetic, ensuring maximum focus on the interactive mission trajectory.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Tech Stack
+- **Languages**: JavaScript (React 19)
+- **Logic**: **State Orchestration** (React Hooks & Contextual Persistence)
+- **Motion**: **Framer Motion** (Physics-Based Dynamics)
+- **Audio**: **Web Audio API** (Procedural Synthesis)
+- **UI System**: Premium Design (Custom CSS & Glassmorphism)
+- **Tooling**: Vite 6 (Modern Bundling Architecture)
+- **Deployment**: GitHub Actions (PWA Deployment Pipeline)
+- **Hosting**: GitHub Pages
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<!-- STRUCTURE -->
+<a name="project-structure"></a>
+## Project Structure
 
-### Deployment
+```python
+REACT-TODO-APP/
+│
+├── .github/ workflows/              # CI/CD Automation
+│   └── deploy.yml                   # GitHub Pages Deployment
+│
+├── docs/                            # Academic Documentation
+│   └── SPECIFICATION.md             # Technical Architecture
+│
+├── Mega/                            # Attribution Assets
+│   ├── Filly.jpg                    # Companion (Filly)
+│   ├── Mega.png                     # Profile Image (Mega Satish)
+│   └── Mega_Professional.jpg        # Secondary Profile
+│
+├── screenshots/                     # Visual Gallery
+│   ├── 1_Landing_Page.png           # Modern Interface
+│   ├── 2_Title_Animation.png        # Interactive Feedback
+│   ├── 3_Tasks_Added.png            # State Management
+│   ├── 4_Progress_33.png            # Progress Tracking
+│   └── 7_Goal_Achieved.png          # Victory State
+│
+├── Source Code/                     # Primary Application Layer
+│   ├── public/                      # Static Assets
+│   ├── src/                         # React Components
+│   │   ├── SoundEngine.js           # Audio Synthesis Core
+│   │   ├── TodoApp.jsx              # Main Orchestration
+│   │   └── index.jsx                # Entry Point
+│   ├── vite.config.js               # Build Architecture
+│   └── package.json                 # Dependency Manifest
+│
+├── SECURITY.md                      # Security Protocols
+├── CITATION.cff                     # Academic Citation Manifest
+├── codemeta.json                    # Metadata Standard
+├── LICENSE                          # MIT License (Verbatim)
+└── README.md                        # Project Entrance
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+<a name="results"></a>
+## Results
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<div align="center">
+  <b>Main Interface: Modern Design</b>
+  <br>
+  <i>Initial system state with premium aesthetics and synchronized brand identity.</i>
+  <br><br>
+  <img src="screenshots/1_Landing_Page.png" alt="Landing Page" width="90%">
+  <br><br><br>
 
+  <b>Mission Injection: Interactive Input</b>
+  <br>
+  <i>Real-time task injection into the reactive orchestration corridor.</i>
+  <br><br>
+  <img src="screenshots/3_Tasks_Added.png" alt="Task Added" width="90%">
+  <br><br><br>
+
+  <b>Tactile Feedback: Kinetic Interaction</b>
+  <br>
+  <i>Successful interaction states with high-fidelity visual and auditory feedback.</i>
+  <br><br>
+  <img src="screenshots/2_Title_Animation.png" alt="Interaction" width="90%">
+  <br><br><br>
+
+  <b>Quantified Progress: Milestone Tracking</b>
+  <br>
+  <i>Linguistic and visual progress indicators for real-time mission synchronization.</i>
+  <br><br>
+  <img src="screenshots/4_Progress_33.png" alt="Progress" width="90%">
+  <br><br><br>
+
+  <b>Victory State: Mission Accomplished</b>
+  <br>
+  <i>System-wide celebration triggered upon total task completion with complex particle effects.</i>
+  <br><br>
+  <img src="screenshots/7_Goal_Achieved.png" alt="Goal Achieved" width="90%">
+</div>
+
+---
+
+<!-- QUICK START -->
+<a name="quick-start"></a>
+## Quick Start
+
+### 1. Prerequisites
+- **Node.js 18+**: Required for build and runtime execution. [Download Node.js](https://nodejs.org/)
+- **npm**: Usually bundled with Node.js.
+- **Git**: For version control and cloning. [Download Git](https://git-scm.com/downloads)
+
+> [!WARNING]
+> **Persistence Asset Acquisition**
+>
+> The application utilizes browser LocalStorage for mission persistence. If running in "Incognito" or "Private" mode, state synchronization may be restricted, preventing the mission docket from persisting across browser lifecycle events.
+
+### 2. Installation & Setup
+
+#### Step 1: Clone the Repository
+Open your terminal and clone the repository:
+```bash
+git clone https://github.com/Amey-Thakur/REACT-TODO-APP.git
+cd REACT-TODO-APP
+```
+
+#### Step 2: Navigate to Source
+Access the primary application layer:
+```bash
+cd "Source Code"
+```
+
+#### Step 3: Install Core Dependencies
+Synchronize the local environment with the mission requirements:
+```bash
+npm install
+```
+
+### 3. Execution
+Launch the primary reactive development server:
+
+```bash
+npm run dev
+```
+
+---
+
+<!-- USAGE GUIDELINES -->
+<a name="usage-guidelines"></a>
+## Usage Guidelines
+
+This repository is openly shared to support learning and knowledge exchange across the academic community.
+
+**For Students**  
+Use this project as reference material for understanding **React State Management (Hooks)**, **Physics-Based UI Animations (Framer Motion)**, and **procedural audio synthesis**. The source code is available for study to facilitate self-paced learning and exploration of **modern front-end pipelines and HMI design principles**.
+
+**For Educators**  
+This project may serve as a practical lab example or supplementary teaching resource for **Web Engineering**, **Human-Machine Interaction**, and **Interactive System Architecture** courses. Attribution is appreciated when utilizing content.
+
+**For Researchers**  
+The documentation and architectural approach may provide insights into **academic project structuring**, **Vite-based PWA deployment**, and **sensory feedback loops in interactive software**.
+
+---
+
+<!-- LICENSE -->
+<a name="license"></a>
+## License
+
+This repository and all its creative and technical assets are made available under the **MIT License**. See the [LICENSE](LICENSE) file for complete terms.
+
+> [!NOTE]
+> **Summary**: You are free to share and adapt this content for any purpose, even commercially, as long as you provide appropriate attribution to the original authors.
+
+Copyright © 2021 Amey Thakur & Mega Satish
+
+---
+
+<!-- ABOUT -->
+<a name="about-this-repository"></a>
+## About This Repository
+
+**Created & Maintained by**: [Amey Thakur](https://github.com/Amey-Thakur) & [Mega Satish](https://github.com/msatmod)
+
+This project features **React Todo App**, a sensory-rich task management system. It represents a personal exploration into **React**-based state orchestration and high-performance interactive design via **Framer Motion**.
+
+**Connect:** [GitHub](https://github.com/Amey-Thakur) &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/amey-thakur) &nbsp;·&nbsp; [ORCID](https://orcid.org/0000-0001-5644-1575)
+
+### Acknowledgments
+
+Grateful acknowledgment to [**Mega Satish**](https://github.com/msatmod) for her exceptional collaboration and scholarly partnership during the development of this interactive engineering project. Her constant support, technical clarity, and dedication to software quality were instrumental in achieving the system's functional objectives. Learning alongside her was a transformative experience; her thoughtful approach to problem-solving and steady encouragement turned complex requirements into meaningful learning moments. This work reflects the growth and insights gained from our side-by-side academic journey. Thank you, Mega, for everything you shared and taught along the way.
+
+Special thanks to the **mentors and peers** whose encouragement, discussions, and support contributed meaningfully to this learning experience.
+
+---
+
+<div align="center">
+
+  [↑ Back to Top](#readme-top)
+
+  [Authors](#authors) &nbsp;·&nbsp; [Overview](#overview) &nbsp;·&nbsp; [Features](#features) &nbsp;·&nbsp; [Structure](#project-structure) &nbsp;·&nbsp; [Results](#results) &nbsp;·&nbsp; [Quick Start](#quick-start) &nbsp;·&nbsp; [Usage Guidelines](#usage-guidelines) &nbsp;·&nbsp; [License](#license) &nbsp;·&nbsp; [About](#about-this-repository) &nbsp;·&nbsp; [Acknowledgments](#acknowledgments)
+
+  <br>
+
+  🧠 **[React Todo App](https://amey-thakur.github.io/REACT-TODO-APP)**
+
+  ---
+
+  ### 🎓 [Computer Engineering Repository](https://github.com/Amey-Thakur/COMPUTER-ENGINEERING)
+
+  **Computer Engineering (B.E.) - University of Mumbai**
+
+  *Semester-wise curriculum, laboratories, projects, and academic notes.*
+
+</div>

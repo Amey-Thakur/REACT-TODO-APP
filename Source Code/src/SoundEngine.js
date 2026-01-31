@@ -107,8 +107,6 @@ class SoundEngine {
      */
     playAdd() {
         this.init();
-        // Fallback for current time if context not ready (edge case prevention)
-        const now = this.audioCtx?.currentTime || 0;
         this.createOscillator(400, 'sine', 0.1, 0.05);
         // Second tone delayed by 50ms to create a chordal/arpeggio effect
         setTimeout(() => this.createOscillator(600, 'sine', 0.15, 0.05), 50);
