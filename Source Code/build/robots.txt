@@ -1,3 +1,18 @@
+# ----------------------------------------------------------------------------
+# File: robots.txt
+# Authors:
+#      Amey Thakur & Mega Satish
+#
+# Repository: https://github.com/Amey-Thakur/REACT-TODO-APP
+# License: MIT License
+# Release Date: June 25, 2022
+# ----------------------------------------------------------------------------
+#
+# File Overview:
+# This file instructions web crawlers on which parts of the site they
+# can access. Currently allows all user agents to access all paths.
+#
+
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
