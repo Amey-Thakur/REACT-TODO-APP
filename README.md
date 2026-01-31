@@ -129,7 +129,7 @@ REACT-TODO-APP/
 ├── SECURITY.md                      # Security Protocols
 ├── CITATION.cff                     # Project Citation Manifest
 ├── codemeta.json                    # Metadata Standard
-├── LICENSE                          # MIT License (Verbatim)
+├── LICENSE                          # MIT License
 └── README.md                        # Project Entrance
 ```
 
