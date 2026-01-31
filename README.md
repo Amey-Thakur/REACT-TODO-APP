@@ -1,7 +1,7 @@
 <div align="center">
 
   <a name="readme-top"></a>
-  # Victory State: Mission Accomplished
+  # Victory State: Goal Achieved
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey)](LICENSE)
   ![Status](https://img.shields.io/badge/Status-Completed-success)
