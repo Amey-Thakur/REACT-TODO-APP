@@ -219,7 +219,15 @@ Launch the primary reactive development server:
 npm run dev
 ```
 
+> [!TIP]
+> ### Interactive Productivity Simulation | Reactive HMI System
+> 
+> Experience the interactive **React Todo App** directly in your browser through the working **GitHub Pages** deployment. This platform features a **Kinetic Interaction Core** that combines **physics-based motion** with **procedural audio synthesis**, providing a visual and auditory demonstration of modern Human-Machine Interaction (HMI) and state orchestration.
+>
+> [**Launch Live Demo on GitHub Pages**](https://amey-thakur.github.io/REACT-TODO-APP/)
+
 ---
+
 
 <!-- USAGE GUIDELINES -->
 <a name="usage-guidelines"></a>
